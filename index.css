@@ -1,0 +1,77 @@
+html,
+body{
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+
+    background-image: url("piece2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px){
+
+    body{
+        background-attachment: scroll;
+    }
+
+    .center-text{
+        font-size: 3rem;
+
+        left: 50%;
+        top: 200px;
+
+        transform: translateX(-50%);
+
+        text-align: center;
+    }
+}
+
+/* Overlay */
+body::before{
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.22);
+
+    z-index: 1;
+}
+
+/* TEXT */
+.center-text{
+    position: absolute;
+    z-index: 2;
+
+    /* Position */
+    top: 200px;
+    left: 800px;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        4px 0px 0px rgba(0, 0, 0, 0.9);
+
+    user-select: none;
+}
