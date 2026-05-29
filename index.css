@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
 
-    background-color: black;
+    background-color: white;
 }
 
 body{
@@ -79,7 +79,7 @@ body::before{
         min-height: 220vh;
 
         /* Zooms image slightly for better coverage */
-        background-size: auto 100%;
+        background-size: cover;
 
         background-position: center top;
     }
