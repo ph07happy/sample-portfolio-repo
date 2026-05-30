@@ -1,48 +1,34 @@
 html,
 body{
+    width: 100%;
+    min-height: 100vh;
+
     margin: 0;
     padding: 0;
-
-    width: 100%;
-    min-height: 100%;
-
-    overflow-x: hidden;
 
     background-color: black;
 }
 
-/* MAIN BODY */
+/* BODY */
 body{
     position: relative;
 
-    /* Prevent white area */
-    min-height: 100vh;
-
     background-image: url("piece2.png");
-
-    /* Proper full coverage */
     background-size: cover;
-
     background-position: center center;
-
     background-repeat: no-repeat;
-
-    /* Better for desktop */
     background-attachment: fixed;
+
+    /* Extra scrolling space */
+    padding-bottom: 100vh;
 }
 
-
-/* FULL SCREEN OVERLAY */
+/* OVERLAY */
 body::before{
     content: "";
 
     position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
+    inset: 0;
 
     background: rgba(0, 0, 0, 0.22);
 
@@ -51,11 +37,9 @@ body::before{
     pointer-events: none;
 }
 
-
 /* TEXT */
 .center-text{
     position: absolute;
-
     z-index: 2;
 
     top: 200px;
@@ -75,36 +59,20 @@ body::before{
     user-select: none;
 }
 
-
-
 /* MOBILE */
 @media (max-width: 768px){
 
-    html,
-    body{
-        min-height: 100vh;
-    }
-
     body{
 
-        /* Mobile fix */
+        /* Mobile browsers don't handle fixed well */
         background-attachment: scroll;
 
-        /* VERY IMPORTANT */
         background-size: cover;
-
         background-position: center center;
-
         background-repeat: no-repeat;
-    }
 
-    body::before{
-
-        /* Full overlay on mobile */
-        position: fixed;
-
-        width: 100vw;
-        height: 100vh;
+        /* Mobile scroll space */
+        padding-bottom: 80vh;
     }
 
     .center-text{
@@ -112,7 +80,6 @@ body::before{
         font-size: 3rem;
 
         top: 180px;
-
         left: 50%;
 
         transform: translateX(-50%);
