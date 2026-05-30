@@ -1,36 +1,42 @@
 html,
 body{
-    width: 100%;
-    min-height: 100vh;
-
     margin: 0;
     padding: 0;
 
-    background-color: white;
+    width: 100%;
+    min-height: 100%;
+
+    overflow-x: hidden;
+
+    background-color: black;
 }
 
+/* MAIN BODY */
 body{
     position: relative;
 
-    /* Gives extra scroll space */
-    min-height: 160vh;
+    /* Prevent white area */
+    min-height: 100vh;
 
     background-image: url("piece2.png");
 
-    /* Keeps image covering properly */
+    /* Proper full coverage */
     background-size: cover;
-    background-position: center top;
+
+    background-position: center center;
+
     background-repeat: no-repeat;
 
-    /* Desktop parallax effect */
+    /* Better for desktop */
     background-attachment: fixed;
 }
 
-/* Overlay */
+
+/* FULL SCREEN OVERLAY */
 body::before{
     content: "";
 
-    position: absolute;
+    position: fixed;
 
     top: 0;
     left: 0;
@@ -45,9 +51,11 @@ body::before{
     pointer-events: none;
 }
 
+
 /* TEXT */
 .center-text{
     position: absolute;
+
     z-index: 2;
 
     top: 200px;
@@ -67,25 +75,27 @@ body::before{
     user-select: none;
 }
 
+
+
 /* MOBILE */
 @media (max-width: 768px){
+
     html,
     body{
-        min-height: 220vh;
+        min-height: 100vh;
     }
 
     body{
 
-        /* Fixed backgrounds break on many phones */
+        /* Mobile fix */
         background-attachment: scroll;
 
-        /* Extra height for mobile scrolling */
-        min-height: 220vh;
-
-        /* Zooms image slightly for better coverage */
+        /* VERY IMPORTANT */
         background-size: cover;
 
-        background-position: center top;
+        background-position: center center;
+
+        background-repeat: no-repeat;
     }
 
     body::before{
@@ -98,15 +108,17 @@ body::before{
     }
 
     .center-text{
+
         font-size: 3rem;
 
-        left: 50%;
         top: 180px;
+
+        left: 50%;
 
         transform: translateX(-50%);
 
-        text-align: center;
-
         width: 90%;
+
+        text-align: center;
     }
 }
