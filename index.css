@@ -6,13 +6,13 @@ body{
     margin: 0;
     padding: 0;
 
-    background-color: yellow;    
+    background-color: blue;    
 }
 
 /* BODY */
 body{
     position: relative;
-    min-width: 1500px;
+    
     background-image: url("piece2.png");
     background-size: cover;
     background-position: center center;
