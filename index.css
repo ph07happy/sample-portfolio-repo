@@ -2,11 +2,12 @@ html,
 body{
     width: 100%;
     min-height: 100vh;
+    min-width: 1500px;
 
     margin: 0;
     padding: 0;
 
-    background-color: blue;    
+    background-color: off-white;    
 }
 
 /* BODY */
@@ -67,7 +68,7 @@ body::before{
         /* Mobile browsers don't handle fixed well */
         background-attachment: scroll;
 
-        background-size: auto;
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
 
