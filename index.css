@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
 
-    background-color: black;
+    background-color: white;
 }
 
 /* BODY */
@@ -67,7 +67,7 @@ body::before{
         /* Mobile browsers don't handle fixed well */
         background-attachment: scroll;
 
-        background-size: cover;
+        background-size: 140% auto;
         background-position: center center;
         background-repeat: no-repeat;
 
