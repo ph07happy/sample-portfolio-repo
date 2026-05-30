@@ -1,20 +1,18 @@
 html,
 body{
     width: 100%;
-    max-width: 100%;
     min-height: 100vh;
 
     margin: 0;
     padding: 0;
 
-    background-color: white;    
-    overflow-x: hidden;
+    background-color: yellow;    
 }
 
 /* BODY */
 body{
     position: relative;
-
+    min-width: 1500px;
     background-image: url("piece2.png");
     background-size: cover;
     background-position: center center;
